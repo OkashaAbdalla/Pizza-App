@@ -1,38 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f3ef;
+  font-family: 'Sono', sans-serif;
+  color: #333;
+}
+
 .App {
+  background: rgb(25, 25, 68);
+  padding: 20px ;
   text-align: center;
+  height: 70px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+  font-size: 1.7rem;
+  color: #f59e0b;
+  letter-spacing: 2px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu-header {
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.menu-header h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+  letter-spacing: 3px;
+  border-bottom: 3px solid #333;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.menu-header p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Pizza {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.Pizza:hover {
+  transform: translateY(-5px);
+}
+
+.Pizza img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.Pizza h3 {
+  font-size: 1.3rem;
+  padding: 15px 15px 5px;
+  color: #333;
+}
+
+.Pizza p {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 0 15px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.Pizza span {
+  display: block;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f59e0b;
+}
+
+.Pizza .sold-out {
+  background-color: #f59e0b;
   color: white;
+  font-style: normal;
+  text-align: center;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f7f3ef;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 40px;
 }
